@@ -11,11 +11,11 @@ second = ['Строка', 'Урбан', 'Компьютер']
 '''
 first_result = (len(x) - len(y) for x in first for y in second  if len(x) != len(y))
 first_result_1 = ( len(x) - len(y) for x,y  in zip(first,second) if len(x) != len(y))
-first_result_3 = (zip(len(x) - len(y)) for x in first for y in second  if len(x) != len(y))
+#first_result_3 = (zip(len(x) - len(y)) for x in first for y in second  if len(x) != len(y))
 
-print(list(first_result))
-print(list(first_result_1))
-print(list(first_result_3))
+print('f_r', list(first_result))
+print('f_r_1', list(first_result_1))
+#print(list(first_result_3))
 '''
 2. В переменную second_result запишите генераторную сборку, которая содержит результаты сравнения длин строк
 в одинаковых позициях из списков first и second. Составьте эту сборку НЕ используя функцию zip. Используйте 
@@ -26,6 +26,6 @@ second_result = (len(x) - len(y) for x in first for y in second)
 second_result_1= (len(str(x)) - len(str(y)) for x in range(len(first)) for y in  range(len(second)))
 second_result_2= (len(first[i]) == len(second[i]) for i in range(len(first)))
 
-print(list(second_result))
-print(list(second_result_1))
-print(list(second_result_2))
+print('s_r', list(second_result))
+print('s_r_1', list(second_result_1))
+print('s_r_1', list(second_result_2))
